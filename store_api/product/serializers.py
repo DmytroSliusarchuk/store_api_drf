@@ -28,3 +28,8 @@ class ProductSerializer(serializers.ModelSerializer):
         product.sizes.set(sizes_data)
 
         return product
+
+class ProductGeneralSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = ['id', 'title', 'description', 'image']
