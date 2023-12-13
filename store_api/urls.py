@@ -20,5 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("__debug__/", include("debug_toolbar.urls")),
-    path('product/', include("store_api.product.urls"))
+    path('product/', include("store_api.product.urls")),
+    path('authjwt/', include("store_api.authjwt.urls")),
 ]
